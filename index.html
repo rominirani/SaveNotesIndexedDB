@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"> 
+	<title>Notes</title> 
+	<link rel="stylesheet" href="jquery.mobile-1.3.1.min.css" />
+	<script src="jquery-1.7.1.min.js"></script>
+	<script src="jquery.mobile-1.3.1.min.js"></script>
+	<script src="app.js"></script>
+	
+</head> 
+	
+<body> 
+
+<!-- Start of first page: #home -->
+<div data-role="page" id="home">
+
+	<div data-role="header" data-position="fixed" id="header">
+	    <h3>Notes</h3>  
+	</div><!-- /header -->
+
+	<div data-role="content">
+        <a href="#" id="btnAddNote" data-role="button" class="big">Add a Note</a>
+		<a href="#" id="btnViewNotes" data-role="button" class="big">View Notes</a>
+	</div><!-- /content -->
+
+</div><!-- /page home -->
+
+<!-- Start of the second page : #add-notes -->
+ <div data-role="page" id="add-notes" data-add-back-btn="true">
+
+  <div data-role="header" id="header">
+    <h1>Add a Note</h1>
+  </div>
+  <div data-role="content">
+    <input type="text" id="noteTitle" value="" placeholder="Title" autofocus/>
+	<textarea placeholder="Details" name="noteDetails" id="noteDetails"></textarea>
+    <a href="#" id="btnSaveNote" data-role="button">Save Note</a>
+	<a href="#" id="btnClearNotes" data-role="button">Clear</a>
+  </div>
+
+</div> <!-- /page add-notes -->
+
+<!-- Start of the third page : #view-notes -->
+ <div data-role="page" id="view-notes" data-add-back-btn="true">
+
+  <div data-role="header" id="header">
+    <h1>List of Notes</h1>
+	<a href="#" data-role="button" class="ui-btn-right" id="clearAllNotesBtn">Clear</a>
+  </div>
+
+  <div id="note-list" data-role="content">
+  
+  </div>
+
+</div> <!-- /page view-notes -->
+
+</body>
+</html>
